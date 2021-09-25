@@ -1,5 +1,5 @@
-import { prop, Ref } from "@typegoose/typegoose"
-import Message from "./Message"
+import { prop, Ref } from '@typegoose/typegoose'
+import Message from './Message'
 
 class Thread {
     @prop({ required: true, ref: () => Message })
