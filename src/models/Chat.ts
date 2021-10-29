@@ -1,6 +1,8 @@
-import { prop, Ref } from "@typegoose/typegoose"
-import Message from "./Message"
-import User from "./User"
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
+import { prop, Ref } from '@typegoose/typegoose'
+import Message from './Message'
+import User from './User'
 
 enum ChatType {
     PRIVATE,
@@ -25,7 +27,7 @@ class Chat {
     public muted!: string
 
     @prop({ required: true, ref: () => User })
-    public participants!: Ref<User>
+    public participants!: Ref<User>[]
 
     @prop()
     public createdAt?: Date
@@ -38,8 +40,6 @@ class Chat {
 
     @prop({ required: true })
     public seenByAll!: boolean
-
-    
 }
 
 export default Chat
@@ -58,4 +58,5 @@ type Chat {
   lastMessage: Message, // tentative
   seenByAll: boolean,
   // seen: User[], // tentative
-}*/
+}
+*/
